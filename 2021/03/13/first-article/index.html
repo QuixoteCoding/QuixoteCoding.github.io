@@ -1,101 +1,144 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  
-  
-  <title>first article | Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="排序Series快速排序原理：取数组中随机一个数作为标准数，分别将小于、等于、大于它的数放在数组的左中右，然后再分别将大于区和小于区做同样的操作，直到大于小于区的大小都等于1。 123456789101112131415161718192021222324252627282930代码细节：&#x2F;&#x2F; 1.主要方法quickSort的参数是arr[]数组，l左索引，r右索引quickSort(int[]">
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>first article | Hexo</title><meta name="author" content="John Doe"><meta name="copyright" content="John Doe"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="排序Series快速排序原理：取数组中随机一个数作为标准数，分别将小于、等于、大于它的数放在数组的左中右，然后再分别将大于区和小于区做同样的操作，直到大于小于区的大小都等于1。 123456789101112131415161718192021222324252627282930代码细节：&#x2F;&#x2F; 1.主要方法quickSort的参数是arr[]数组，l左索引，r右索引quickSort(int[]">
 <meta property="og:type" content="article">
 <meta property="og:title" content="first article">
 <meta property="og:url" content="http://example.com/2021/03/13/first-article/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="排序Series快速排序原理：取数组中随机一个数作为标准数，分别将小于、等于、大于它的数放在数组的左中右，然后再分别将大于区和小于区做同样的操作，直到大于小于区的大小都等于1。 123456789101112131415161718192021222324252627282930代码细节：&#x2F;&#x2F; 1.主要方法quickSort的参数是arr[]数组，l左索引，r右索引quickSort(int[]">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg">
 <meta property="article:published_time" content="2021-03-13T12:43:43.000Z">
-<meta property="article:modified_time" content="2021-03-13T12:44:34.495Z">
+<meta property="article:modified_time" content="2021-03-13T14:29:19.753Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-  
-  
-    <link rel="shortcut icon" href="/favicon.png">
-  
-  
-    
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2021/03/13/first-article/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2021-03-13 22:29:19'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
 
-  
-  
-<link rel="stylesheet" href="/css/style.css">
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
 
-  
-    
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
 
-  
-<meta name="generator" content="Hexo 5.4.0"></head>
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
-      </div>
-    </div>
-  </div>
-</header>
-
-      <div class="outer">
-        <section id="main"><article id="post-first-article" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2021/03/13/first-article/" class="article-date">
-  <time class="dt-published" datetime="2021-03-13T12:43:43.000Z" itemprop="datePublished">2021-03-13</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
   
-    <h1 class="p-name article-title" itemprop="headline name">
-      first article
-    </h1>
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
   
-
-      </header>
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
     
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h1 id="排序Series"><a href="#排序Series" class="headerlink" title="排序Series"></a>排序Series</h1><h3 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h3><p><strong>原理：</strong>取数组中随机一个数作为标准数，分别将小于、等于、大于它的数放在数组的左中右，然后再分别将大于区和小于区做同样的操作，直到大于小于区的大小都等于1。</p>
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    })(window)</script><meta name="generator" content="Hexo 5.4.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="/null" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">2</div></a></div></div></div><hr/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Hexo</a></span><div id="menus"><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">first article</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2021-03-13T12:43:43.000Z" title="Created 2021-03-13 20:43:43">2021-03-13</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2021-03-13T14:29:19.753Z" title="Updated 2021-03-13 22:29:19">2021-03-13</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="排序Series"><a href="#排序Series" class="headerlink" title="排序Series"></a>排序Series</h1><h3 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h3><p><strong>原理：</strong>取数组中随机一个数作为标准数，分别将小于、等于、大于它的数放在数组的左中右，然后再分别将大于区和小于区做同样的操作，直到大于小于区的大小都等于1。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">代码细节：</span><br><span class="line"><span class="comment">// 1.主要方法quickSort的参数是arr[]数组，l左索引，r右索引</span></span><br><span class="line">quickSort(<span class="keyword">int</span>[] arr, <span class="keyword">int</span> l, <span class="keyword">int</span> r)</span><br><span class="line"><span class="comment">// 2.递归出口条件是左索引l小于右索引r</span></span><br><span class="line"><span class="keyword">if</span>(l &lt; r)&#123;&#125;</span><br><span class="line"><span class="comment">// 3.获得排序区间中的一个随机位置的数，将它和r索引的交换</span></span><br><span class="line">swap(arr, r, l + (<span class="keyword">int</span>) Math.random() * (r - l + <span class="number">1</span>))</span><br><span class="line"><span class="comment">// 4.partition方法得到的数组保存了相等区的开始和结束索引，所以递归函数的参数要注意</span></span><br><span class="line">quickSort(arr, l, p[<span class="number">0</span>] - <span class="number">1</span>)</span><br><span class="line">quickSort(arr, p[<span class="number">1</span>] + <span class="number">1</span>, r)</span><br><span class="line"><span class="comment">// 5.partition方法中less和more的定义注意</span></span><br><span class="line"><span class="keyword">int</span> less = l - <span class="number">1</span></span><br><span class="line"><span class="keyword">int</span> more = r</span><br><span class="line"><span class="comment">// 6.partition方法while循环条件：l是一直变化的遍历索引，碰到more区就停下</span></span><br><span class="line"><span class="keyword">while</span> (l &lt; more) &#123;&#125;</span><br><span class="line"><span class="comment">// 7.less区和more区的扩张规则：arr[r]保存的就是标准数，所以要用arr[l]和它比较</span></span><br><span class="line"> <span class="keyword">if</span> (arr[l] &lt; arr[r]) &#123;</span><br><span class="line">     <span class="comment">// 7.1.less区扩张，注意前++</span></span><br><span class="line">     swap(arr, ++less, l++);</span><br><span class="line"> &#125; <span class="keyword">else</span> <span class="keyword">if</span> (arr[l] &gt; arr[r]) &#123;</span><br><span class="line">     <span class="comment">// 7.2.more区扩张，注意前--，l不++</span></span><br><span class="line">     swap(arr, --more, l);</span><br><span class="line"> &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">     <span class="comment">// 7.3.相等，l直接++</span></span><br><span class="line">      l++;</span><br><span class="line"> &#125;</span><br><span class="line"><span class="comment">// 8.标准数归位</span></span><br><span class="line">swap(arr, r, more)</span><br><span class="line"><span class="comment">// 9.创建返回的p数组，more已经是交换好的标准数，less是小于区结束索引需要+1</span></span><br><span class="line"><span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;less + <span class="number">1</span>, more&#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h3><p><strong>原理：</strong>将数组不断地中间分开，直到分出只剩两个，然后使用一个辅助数组，从最小的小数组依次排序。</p>
@@ -164,114 +207,4 @@
 
 <h3 id="后序遍历"><a href="#后序遍历" class="headerlink" title="后序遍历"></a>后序遍历</h3> <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">代码细节：</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">pastOrder</span><span class="params">(Node head)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (head != <span class="keyword">null</span>) &#123;</span><br><span class="line">        <span class="comment">// 1.准备两个stack</span></span><br><span class="line">        <span class="comment">// s1用来中左右遍历</span></span><br><span class="line">        Stack&lt;Node&gt; s1 = <span class="keyword">new</span> Stack&lt;&gt;();</span><br><span class="line">        <span class="comment">// s2用来逆序s1</span></span><br><span class="line">        Stack&lt;Node&gt; s2 = <span class="keyword">new</span> Stack&lt;&gt;();</span><br><span class="line">        <span class="comment">// 2.相比先序遍历将左右子节点的顺序反过来</span></span><br><span class="line">        s1.push(head);</span><br><span class="line">        <span class="keyword">while</span> (!s1.isEmpty()) &#123;</span><br><span class="line">            head = s1.pop();</span><br><span class="line">            <span class="comment">// 3.中加入s2</span></span><br><span class="line">            s2.push(head);</span><br><span class="line">            <span class="comment">// 4.左加入s2</span></span><br><span class="line">            <span class="keyword">if</span> (head.left != <span class="keyword">null</span>) &#123;</span><br><span class="line">                s1.push(head.left);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 5.右加入s2</span></span><br><span class="line">            <span class="keyword">if</span> (head.right != <span class="keyword">null</span>) &#123;</span><br><span class="line">                s1.push(head.right);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 6.逆序输出s2</span></span><br><span class="line">        <span class="keyword">while</span> (!s2.isEmpty()) &#123;</span><br><span class="line">            System.out.println(s2.pop().value + <span class="string">&quot; &quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h1 id="回溯算法"><a href="#回溯算法" class="headerlink" title="回溯算法"></a>回溯算法</h1><h3 id="全排列-46"><a href="#全排列-46" class="headerlink" title="全排列#46"></a>全排列#46</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Permute</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> List&lt;List&lt;Integer&gt;&gt; permute(<span class="keyword">int</span>[] nums) &#123;</span><br><span class="line">        <span class="keyword">int</span> len = nums.length;</span><br><span class="line">        <span class="comment">// 1.res结果数组</span></span><br><span class="line">        List&lt;List&lt;Integer&gt;&gt; res = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        <span class="keyword">if</span> (len == <span class="number">0</span>) <span class="keyword">return</span> res;</span><br><span class="line">        <span class="comment">// 2.使用stack保存每一种结果</span></span><br><span class="line">        Stack&lt;Integer&gt; path = <span class="keyword">new</span> Stack&lt;Integer&gt;();</span><br><span class="line">        <span class="comment">// 3.使用一个和原数组等长的布尔数组，保存每一个元素是否使用过</span></span><br><span class="line">        <span class="keyword">boolean</span>[] used = <span class="keyword">new</span> <span class="keyword">boolean</span>[len];</span><br><span class="line">        dfs(nums, len, <span class="number">0</span>, path, used, res);</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	* params：</span></span><br><span class="line"><span class="comment">	* 原数组nums, 数组长度len, 布尔数组used, 结果集合res</span></span><br><span class="line"><span class="comment">	* 递归深度depth: 用来控制递归层次以及出口，重要！</span></span><br><span class="line"><span class="comment">	* 单次结果：path</span></span><br><span class="line"><span class="comment">	*/</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> len, <span class="keyword">int</span> depth, Stack&lt;Integer&gt; path, <span class="keyword">boolean</span>[] used, List&lt;List&lt;Integer&gt;&gt; res)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 4.用深度判断递归出口</span></span><br><span class="line">        <span class="keyword">if</span> (depth == len) &#123;</span><br><span class="line">            <span class="comment">// 5.要添加新创建的ArrayList</span></span><br><span class="line">            res.add(<span class="keyword">new</span> ArrayList&lt;&gt;(path));</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="comment">// 6.遍历数组元素</span></span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; len; i++) &#123;</span><br><span class="line">                <span class="comment">// 7.先判断是否用过</span></span><br><span class="line">                <span class="keyword">if</span> (used[i]) <span class="keyword">continue</span>;</span><br><span class="line">                <span class="comment">// 8.加入单次结果</span></span><br><span class="line">                path.push(nums[i]);</span><br><span class="line">                <span class="comment">// 9.当前元素被使用过</span></span><br><span class="line">                used[i] = <span class="keyword">true</span>;</span><br><span class="line">                <span class="comment">// 10.在当前元素被使用情况下开始下一个元素</span></span><br><span class="line">                dfs(nums, len, depth + <span class="number">1</span>, path, used, res);</span><br><span class="line">                <span class="comment">// 11.回溯当前的选择</span></span><br><span class="line">                used[i] = <span class="keyword">false</span>;</span><br><span class="line">                path.pop();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2021/03/13/first-article/" data-id="ckm7q1lj30000v0vp6m365uxx" data-title="first article" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-    
-<nav id="article-nav">
-  
-  
-    <a href="/2021/03/13/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Hello World</div>
-    </a>
-  
-</nav>
-
-  
-</article>
-
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-
-  
-    
-
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2021/03/13/first-article/">first article</a>
-          </li>
-        
-          <li>
-            <a href="/2021/03/13/hello-world/">Hello World</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      
-      &copy; 2021 John Doe<br>
-      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
-
-
-<script src="/js/jquery-3.4.1.min.js"></script>
-
-
-
-  
-<script src="/fancybox/jquery.fancybox.min.js"></script>
-
-
-
-
-<script src="/js/script.js"></script>
-
-
-
-
-
-  </div>
-</body>
-</html>
+<h1 id="回溯算法"><a href="#回溯算法" class="headerlink" title="回溯算法"></a>回溯算法</h1><h3 id="全排列-46"><a href="#全排列-46" class="headerlink" title="全排列#46"></a>全排列#46</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Permute</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> List&lt;List&lt;Integer&gt;&gt; permute(<span class="keyword">int</span>[] nums) &#123;</span><br><span class="line">        <span class="keyword">int</span> len = nums.length;</span><br><span class="line">        <span class="comment">// 1.res结果数组</span></span><br><span class="line">        List&lt;List&lt;Integer&gt;&gt; res = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        <span class="keyword">if</span> (len == <span class="number">0</span>) <span class="keyword">return</span> res;</span><br><span class="line">        <span class="comment">// 2.使用stack保存每一种结果</span></span><br><span class="line">        Stack&lt;Integer&gt; path = <span class="keyword">new</span> Stack&lt;Integer&gt;();</span><br><span class="line">        <span class="comment">// 3.使用一个和原数组等长的布尔数组，保存每一个元素是否使用过</span></span><br><span class="line">        <span class="keyword">boolean</span>[] used = <span class="keyword">new</span> <span class="keyword">boolean</span>[len];</span><br><span class="line">        dfs(nums, len, <span class="number">0</span>, path, used, res);</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	* params：</span></span><br><span class="line"><span class="comment">	* 原数组nums, 数组长度len, 布尔数组used, 结果集合res</span></span><br><span class="line"><span class="comment">	* 递归深度depth: 用来控制递归层次以及出口，重要！</span></span><br><span class="line"><span class="comment">	* 单次结果：path</span></span><br><span class="line"><span class="comment">	*/</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> len, <span class="keyword">int</span> depth, Stack&lt;Integer&gt; path, <span class="keyword">boolean</span>[] used, List&lt;List&lt;Integer&gt;&gt; res)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 4.用深度判断递归出口</span></span><br><span class="line">        <span class="keyword">if</span> (depth == len) &#123;</span><br><span class="line">            <span class="comment">// 5.要添加新创建的ArrayList</span></span><br><span class="line">            res.add(<span class="keyword">new</span> ArrayList&lt;&gt;(path));</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="comment">// 6.遍历数组元素</span></span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; len; i++) &#123;</span><br><span class="line">                <span class="comment">// 7.先判断是否用过</span></span><br><span class="line">                <span class="keyword">if</span> (used[i]) <span class="keyword">continue</span>;</span><br><span class="line">                <span class="comment">// 8.加入单次结果</span></span><br><span class="line">                path.push(nums[i]);</span><br><span class="line">                <span class="comment">// 9.当前元素被使用过</span></span><br><span class="line">                used[i] = <span class="keyword">true</span>;</span><br><span class="line">                <span class="comment">// 10.在当前元素被使用情况下开始下一个元素</span></span><br><span class="line">                dfs(nums, len, depth + <span class="number">1</span>, path, used, res);</span><br><span class="line">                <span class="comment">// 11.回溯当前的选择</span></span><br><span class="line">                used[i] = <span class="keyword">false</span>;</span><br><span class="line">                path.pop();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="mailto:undefined">John Doe</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="http://example.com/2021/03/13/first-article/">http://example.com/2021/03/13/first-article/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-full"><a href="/2021/03/13/hello-world/"><img class="prev-cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">Previous Post</div><div class="prev_info">Hello World</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-info-avatar is-center"><img class="avatar-img" src="/null" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">John Doe</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">2</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Catalog</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%8E%92%E5%BA%8FSeries"><span class="toc-number">1.</span> <span class="toc-text">排序Series</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F"><span class="toc-number">1.0.1.</span> <span class="toc-text">快速排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F"><span class="toc-number">1.0.2.</span> <span class="toc-text">归并排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A0%86%E6%8E%92%E5%BA%8F"><span class="toc-number">1.0.3.</span> <span class="toc-text">堆排序</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Didn%E2%80%99t-Code"><span class="toc-number">2.</span> <span class="toc-text">Didn’t Code</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#LRU%E7%BC%93%E5%AD%98"><span class="toc-number">2.0.1.</span> <span class="toc-text">LRU缓存</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8A%9F%E8%83%BD%EF%BC%9A"><span class="toc-number">2.0.1.1.</span> <span class="toc-text">功能：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A6%81%E6%B1%82%EF%BC%9A"><span class="toc-number">2.0.1.2.</span> <span class="toc-text">要求：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0%E6%80%9D%E8%B7%AF"><span class="toc-number">2.0.1.3.</span> <span class="toc-text">实现思路</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#LFU%E7%BC%93%E5%AD%98"><span class="toc-number">2.0.2.</span> <span class="toc-text">LFU缓存</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8A%9F%E8%83%BD%EF%BC%9A-1"><span class="toc-number">2.0.2.1.</span> <span class="toc-text">功能：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A6%81%E6%B1%82%EF%BC%9A-1"><span class="toc-number">2.0.2.2.</span> <span class="toc-text">要求：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0%E6%80%9D%E8%B7%AF-1"><span class="toc-number">2.0.2.3.</span> <span class="toc-text">实现思路</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BF%AD%E4%BB%A3%E9%81%8D%E5%8E%86%E4%BA%8C%E5%8F%89%E6%A0%91"><span class="toc-number">3.</span> <span class="toc-text">迭代遍历二叉树</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%88%E5%BA%8F%E9%81%8D%E5%8E%86"><span class="toc-number">3.0.1.</span> <span class="toc-text">先序遍历</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86"><span class="toc-number">3.0.2.</span> <span class="toc-text">中序遍历</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%8E%E5%BA%8F%E9%81%8D%E5%8E%86"><span class="toc-number">3.0.3.</span> <span class="toc-text">后序遍历</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95"><span class="toc-number">4.</span> <span class="toc-text">回溯算法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%A8%E6%8E%92%E5%88%97-46"><span class="toc-number">4.0.1.</span> <span class="toc-text">全排列#46</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2021/03/13/hello-world/" title="Hello World"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hello World"/></a><div class="content"><a class="title" href="/2021/03/13/hello-world/" title="Hello World">Hello World</a><time datetime="2021-03-13T14:29:19.753Z" title="Created 2021-03-13 22:29:19">2021-03-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/03/13/first-article/" title="first article"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="first article"/></a><div class="content"><a class="title" href="/2021/03/13/first-article/" title="first article">first article</a><time datetime="2021-03-13T12:43:43.000Z" title="Created 2021-03-13 20:43:43">2021-03-13</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By John Doe</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
