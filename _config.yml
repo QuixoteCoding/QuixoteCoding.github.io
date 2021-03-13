@@ -3,17 +3,18 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle: ''
-description: ''
+title: QuixoteCoding
+subtitle: 
+description: 
 keywords:
-author: John Doe
+author: quixote
 language: en
 timezone: ''
+email: wangheng.hi@gmail.com
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://example.com
+url: http://www.quixotecoding.top
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
